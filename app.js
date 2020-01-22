@@ -19,11 +19,19 @@ let person = new Person('Isaac', '36', 'West Jordan')
 app.use(bodyParser.urlencoded({extended:false}))
 
 app.get('/', (req, res, next)=>{
-    res.send("Welcome to my server!")
+    res.send("<!DOCTYPE html>"+
+                "<html>"+
+                    "<head>"+
+                        "<title>Welcome</title>"+
+                    "</head>"+
+                    "<body>"+
+                        "<h1>Welcome to my server!</h1>"+
+                    "</body>"+
+                "</html>")
 })
 
 app.get('/api', (req, res, next)=>{
-    res.send(JSON.stringify(person))
+    res.json(person)
 })
 
 app.listen(PORT, ()=>{
