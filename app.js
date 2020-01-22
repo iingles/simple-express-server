@@ -1,5 +1,9 @@
-const express = require('express')
-const bodyParser = require('body-parser')
+// const express = require('express')
+// const bodyParser = require('body-parser')
+
+//Using ESM to make this more modern
+import express from 'express'
+import bodyParser from 'body-parser'
 
 const app = express()
 
